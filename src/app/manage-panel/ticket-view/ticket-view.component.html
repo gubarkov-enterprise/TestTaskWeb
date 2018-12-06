@@ -1,0 +1,21 @@
+<mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ ticket.title}} [{{ ticket.status.toLocaleString() }}]
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ ticket.dateReg | date:'medium' }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>  
+      <div class="container">
+        <p style="margin-top: 10px" class="text-justify">{{ ticket.content }}</p>
+        <div class="row">
+            <button (click)="changeState('Approved')" mdbBtn type="button" color="success" class="waves-light" mdbWavesEffect>Accept</button>
+            <button (click)="changeState('Rejected')" mdbBtn type="button" color="danger" class="waves-light" mdbWavesEffect>Reject</button>
+          </div>
+        {{ ticket.userEmail }}        
+      </div>
+    </mat-expansion-panel>
+    
+  

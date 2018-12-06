@@ -1,0 +1,15 @@
+<div class="container">
+  <mdb-card>
+    <mdb-card-body>
+      <a (click)="back()">
+        <mdb-card-title>
+          <h4>{{ detail.title }}</h4>
+          <p>created: {{ detail.created }}</p>
+          <p>completed {{ detail.completed }}</p>
+          <p>reaction time {{ detail.responseTime }}</p>
+        </mdb-card-title>
+        <mdb-card-text>{{ detail.content }}</mdb-card-text>
+      </a>
+    </mdb-card-body>
+  </mdb-card>
+</div>

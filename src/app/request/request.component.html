@@ -1,0 +1,33 @@
+<div class="container" style="margin-top: 20px">
+  <mdb-card>
+    <mdb-card-body>
+      <mdb-card-title>
+        <div class="row">
+          <div class="col-sm">
+            <div class="md-form">
+              <input mdbInputDirective type="text" id="form2" class="form-control" [(ngModel)]="request.title">
+              <label for="form2">Title</label>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="md-form">
+              <i class="fa fa-envelope prefix"></i>
+              <input mdbInputDirective type="text" id="form2" class="form-control" [(ngModel)]="request.userEmail">
+              <label for="form2">Email</label>
+            </div>
+          </div>
+        </div>
+      </mdb-card-title>
+      <mdb-card-text>
+        <div class="md-form">
+          <textarea type="text" id="form7" class="md-textarea form-control" [(ngModel)]="request.content" rows="12"></textarea>
+          <label for="form7" style="margin-top: -15px">Ticket</label>
+        </div>
+      </mdb-card-text>
+      <div class="flex-row">
+        <button mdbBtn type="button" color="success" outline="true" (click)="applyRequest()" mdbWavesEffect>Apply</button>
+        <label style="color: lawngreen" *ngIf="created">Sended</label>
+      </div>
+    </mdb-card-body>
+  </mdb-card>
+</div>

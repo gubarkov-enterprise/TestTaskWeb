@@ -1,0 +1,15 @@
+<div class="container" style="margin-top: 25px;">
+  <mdb-card>
+    <mdb-card-body>
+      <mdb-card-title> <h4>Tickets</h4> </mdb-card-title>
+      <mat-checkbox (click)="updateList($event)" data='Approved' [checked]="statusFilter.indexOf('Approved') === -1">Approved</mat-checkbox>
+      <mat-checkbox (click)="updateList($event)" data='Rejected' [checked]="statusFilter.indexOf('Rejected') === -1">Rejected</mat-checkbox>
+      <mat-checkbox (click)="updateList($event)" data='Unchecked' [checked]="statusFilter.indexOf('Unchecked') === -1">Unchecked</mat-checkbox>
+      <mdb-card-text>
+        <div *ngFor="let ticket of displayedTickets" style="margin-top: 15px">
+          <app-ticket-view [ticket]="ticket"></app-ticket-view>
+        </div>
+      </mdb-card-text>  
+    </mdb-card-body>
+  </mdb-card>
+</div>
